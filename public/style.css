@@ -1,0 +1,4 @@
+#statusCanvas,
+#gameCanvas {
+  transform: scaleX(-1);
+}
