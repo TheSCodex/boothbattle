@@ -18,8 +18,6 @@
 
 - **Vite**: Utilizado como bundler, **Vite** optimiza el flujo de trabajo y la experiencia de desarrollo con recarga en vivo y tiempos de construcción rápidos. También mejora el rendimiento de la carga y la ejecución del juego.
 
----
-
 ## **Estructura del Proyecto**
 
 El proyecto está organizado en módulos independientes, cada uno responsable de una funcionalidad específica del juego, tales como:
@@ -30,8 +28,6 @@ El proyecto está organizado en módulos independientes, cada uno responsable de
 - `poseDetection.ts` - Integración de TensorFlow.js para la detección de posturas.
 - `drawing.ts` - Renderizado de la interfaz gráfica y los elementos del juego.
 - `geometry.ts` - Cálculos geométricos para la trayectoria de los proyectiles.
-
---- 
 
 ## **Instrucciones de Juego**
 
@@ -56,8 +52,6 @@ Una vez que hayas activado el modo de disparo, podrás ajustar la dirección y l
 - Para un disparo más preciso, asegúrate de mantener los movimientos controlados y realizar el gesto de disparo con claridad.
 - Experimenta con los ángulos y la potencia para encontrar la mejor manera de acertar a tu oponente.
 - Es importante que la cámara este colocada a una distancia suficiente para cubrir el cuerpo de ambos jugadores.
-
----
 
 ## **Instalación**
 
