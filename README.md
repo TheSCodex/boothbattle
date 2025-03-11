@@ -46,7 +46,7 @@ Una vez que hayas activado el modo de disparo, podrás ajustar la dirección y l
 
 - **Apuntar**: Mueve tu **brazo derecho (o izquierdo si eres el jugador en el lado derecho)** hacia arriba o hacia abajo para ajustar el **ángulo de disparo**.
   
-- **Ajustar Potencia**: La potencia del disparo se ajusta de manera horizontal, moviendo la **muñeca** más cerca o más lejos del **hombro** (simulando cómo se sostiene un arco). Cuanto más lejos esté la muñeca del hombro, mayor será la potencia del disparo.
+- **Ajustar Potencia**: La potencia del disparo se ajusta de manera horizontal, moviendo la **muñeca** más cerca o más lejos del **hombro** (simulando cómo se sostiene un arco). Cuanto más lejos esté la muñeca del hombro, mayor será la potencia del disparo. Después de 3 segundos sin movimiento el proyectil será liberado.
 
 ### **Consejos de Juego:**
 - Para un disparo más preciso, asegúrate de mantener los movimientos controlados y realizar el gesto de disparo con claridad.
