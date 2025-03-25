@@ -1,74 +1,74 @@
-# **BoothBattle - Juego de Artillería con Detección de Posturas**
 
-**BoothBattle** es un juego de artillería en el que los jugadores controlan tanques y deben ajustar el ángulo y la potencia de sus disparos para derribar a sus oponentes. Lo innovador de este demo es su integración con la **detección de posturas del jugador**, lo que permite un control del juego basado en los movimientos del cuerpo.
+# **BoothBattle - Artillery Game with Pose Detection**  
 
-## **Características del Juego**
+**BoothBattle** is an artillery game where players control tanks and must adjust the angle and power of their shots to defeat opponents. What makes this demo unique is its integration with **pose detection**, allowing players to control the game using body movements.  
+--
+## **Game Features**  
 
-- **Control por Postura**: Utilizando **TensorFlow.js**, el juego detecta los movimientos del jugador a través de la cámara web. Esto permite a los jugadores disparar el proyectil al realizar un gesto específico (por ejemplo, levantar el brazo), convirtiendo el control en una experiencia inmersiva y dinámica.
-  
-- **Físicas**: Los proyectiles se mueven de acuerdo con las leyes físicas, calculando la trayectoria y el impacto de los disparos, lo que agrega un nivel de desafío y estrategia al juego.
+- **Pose-Based Controls**: Using **TensorFlow.js**, the game detects player movements via a webcam. Players can fire projectiles by performing a specific gesture (e.g., raising an arm), making the control system immersive and dynamic.  
 
-- **Interfaz de Usuario**: El juego incluye estadísticas en tiempo real sobre la distancia de los disparos, el ángulo y el estado del tanque, proporcionando al jugador información clave para tomar decisiones estratégicas.
+- **Physics-Based Gameplay**: Projectiles follow realistic physics, calculating trajectories and impact points, adding a layer of challenge and strategy to the game.  
 
-## **Tecnologías Utilizadas**
+- **User Interface**: The game provides real-time stats on shot distance, angles, and tank status, giving players essential information for strategic decision-making.  
+--
+## **Technologies Used**  
 
-- **TensorFlow.js**: Usado para la **detección de posturas** en tiempo real, permitiendo que el jugador controle el juego mediante gestos corporales. TensorFlow.js proporciona un modelo de pose de alta precisión para rastrear el cuerpo humano.
+- **TensorFlow.js**: Enables **real-time pose detection**, allowing players to control the game through body gestures. TensorFlow.js provides a high-precision pose model to track human movement.  
 
-- **TypeScript**: El juego está desarrollado en **TypeScript**, lo que asegura un código más robusto y fácil de mantener. El uso de tipado estático mejora la calidad del desarrollo y la detección de errores.
+- **TypeScript**: The game is developed in **TypeScript**, ensuring a more robust and maintainable codebase. Static typing improves code quality and error detection.  
 
-- **Vite**: Utilizado como bundler, **Vite** optimiza el flujo de trabajo y la experiencia de desarrollo con recarga en vivo y tiempos de construcción rápidos. También mejora el rendimiento de la carga y la ejecución del juego.
+- **Vite**: Used as the bundler, **Vite** optimizes the development workflow with live reload and fast build times. It also enhances the game's loading and execution performance.  
+--
+## **Project Structure**  
 
-## **Estructura del Proyecto**
+The project is organized into independent modules, each responsible for a specific game function, including:  
 
-El proyecto está organizado en módulos independientes, cada uno responsable de una funcionalidad específica del juego, tales como:
+- `gameState.ts` - Manages game states (players, shots, collisions).  
+- `player.ts` - Handles player logic and tank control.  
+- `arrow.ts` - Manages projectile physics and behavior.  
+- `poseDetection.ts` - Integrates TensorFlow.js for pose detection.  
+- `drawing.ts` - Renders the graphical interface and game elements.  
+- `geometry.ts` - Performs geometric calculations for projectile trajectories.  
+---
+## **How to Play**  
 
-- `gameState.ts` - Manejo de los estados del juego (jugadores, disparos, colisiones).
-- `player.ts` - Lógica del jugador y control del tanque.
-- `arrow.ts` - Gestión de los proyectiles y su física.
-- `poseDetection.ts` - Integración de TensorFlow.js para la detección de posturas.
-- `drawing.ts` - Renderizado de la interfaz gráfica y los elementos del juego.
-- `geometry.ts` - Cálculos geométricos para la trayectoria de los proyectiles.
+### **How to Enter Shooting Mode:**  
 
-## **Instrucciones de Juego**
+1. **Starting Position:**  
+   - The player must stand upright in front of the webcam, arms relaxed at the sides.  
 
-### **Cómo iniciar el modo de disparo:**
+2. **Activating Shooting Mode:**  
+   - **Player on the left side of the screen**: Move your **left wrist** toward your **right shoulder**. This gesture activates **shooting mode**.  
+   - **Player on the right side of the screen**: Move your **right wrist** toward your **left shoulder** to activate **shooting mode** as well.  
 
-1. **Posición Inicial:**
-   - El jugador debe estar en posición vertical frente a la cámara web, con los brazos relajados a los lados.
+### **Shooting Controls:**  
 
-2. **Iniciar el Modo de Disparo:**
-   - **Jugador en el lado izquierdo de la pantalla**: Lleva tu **muñeca izquierda** hacia tu **hombro derecho**. Este gesto inicia el **modo de disparo**.
-   - **Jugador en el lado derecho de la pantalla**: Lleva tu **muñeca derecha** hacia tu **hombro izquierdo**. Esto también activará el **modo de disparo**.
+Once shooting mode is activated, you can adjust the shot’s direction and power as follows:  
 
-### **Control del Disparo:**
+- **Aiming**: Move your **right arm (or left arm if you're the player on the right side)** up or down to adjust the **shooting angle**.  
+- **Power Adjustment**: The shot power is adjusted horizontally by moving your **wrist** closer or farther from your **shoulder** (simulating how you hold a bow). The farther the wrist is from the shoulder, the greater the shot power. If no movement is detected for 3 seconds, the projectile will be released.  
 
-Una vez que hayas activado el modo de disparo, podrás ajustar la dirección y la potencia del disparo de la siguiente manera:
+### **Game Tips:**  
+- For more precise shots, ensure controlled movements and perform the shooting gesture clearly.  
+- Experiment with different angles and power levels to find the best way to hit your opponent.  
+- Make sure the camera is positioned far enough to capture both players’ full bodies.
+---
+## **Installation**  
 
-- **Apuntar**: Mueve tu **brazo derecho (o izquierdo si eres el jugador en el lado derecho)** hacia arriba o hacia abajo para ajustar el **ángulo de disparo**.
-  
-- **Ajustar Potencia**: La potencia del disparo se ajusta de manera horizontal, moviendo la **muñeca** más cerca o más lejos del **hombro** (simulando cómo se sostiene un arco). Cuanto más lejos esté la muñeca del hombro, mayor será la potencia del disparo. Después de 3 segundos sin movimiento el proyectil será liberado.
-
-### **Consejos de Juego:**
-- Para un disparo más preciso, asegúrate de mantener los movimientos controlados y realizar el gesto de disparo con claridad.
-- Experimenta con los ángulos y la potencia para encontrar la mejor manera de acertar a tu oponente.
-- Es importante que la cámara este colocada a una distancia suficiente para cubrir el cuerpo de ambos jugadores.
-
-## **Instalación**
-
-1. Clona el repositorio:
+1. Clone the repository:  
     ```bash
-    git clone https://github.com/tu_usuario/boothbattle.git
-    ```
+    git clone https://github.com/your_username/boothbattle.git
+    ```  
 
-2. Instala las dependencias:
+2. Install dependencies:  
     ```bash
     cd boothbattle
     npm install
-    ```
+    ```  
 
-3. Inicia el servidor de desarrollo:
+3. Start the development server:  
     ```bash
     npm run dev
-    ```
+    ```  
 
-4. Abre el juego en tu navegador accediendo a `http://localhost:5173`.
+4. Open the game in your browser by navigating to `http://localhost:5173`.  
