@@ -2,14 +2,14 @@
 # **BoothBattle - Artillery Game with Pose Detection**  
 
 **BoothBattle** is an artillery game where players control tanks and must adjust the angle and power of their shots to defeat opponents. What makes this demo unique is its integration with **pose detection**, allowing players to control the game using body movements.  
----
+
 ## **Game Features**  
 - **Pose-Based Controls**: Using **TensorFlow.js**, the game detects player movements via a webcam. Players can fire projectiles by performing a specific gesture (e.g., raising an arm), making the control system immersive and dynamic.  
 
 - **Physics-Based Gameplay**: Projectiles follow realistic physics, calculating trajectories and impact points, adding a layer of challenge and strategy to the game.  
 
 - **User Interface**: The game provides real-time stats on shot distance, angles, and tank status, giving players essential information for strategic decision-making.  
----
+
 ## **Technologies Used**  
 
 - **TensorFlow.js**: Enables **real-time pose detection**, allowing players to control the game through body gestures. TensorFlow.js provides a high-precision pose model to track human movement.  
@@ -17,7 +17,7 @@
 - **TypeScript**: The game is developed in **TypeScript**, ensuring a more robust and maintainable codebase. Static typing improves code quality and error detection.  
 
 - **Vite**: Used as the bundler, **Vite** optimizes the development workflow with live reload and fast build times. It also enhances the game's loading and execution performance.  
----
+
 ## **Project Structure**  
 
 The project is organized into independent modules, each responsible for a specific game function, including:  
@@ -28,7 +28,7 @@ The project is organized into independent modules, each responsible for a specif
 - `poseDetection.ts` - Integrates TensorFlow.js for pose detection.  
 - `drawing.ts` - Renders the graphical interface and game elements.  
 - `geometry.ts` - Performs geometric calculations for projectile trajectories.  
----
+
 ## **How to Play**  
 
 ### **How to Enter Shooting Mode:**  
@@ -51,7 +51,7 @@ Once shooting mode is activated, you can adjust the shot’s direction and power
 - For more precise shots, ensure controlled movements and perform the shooting gesture clearly.  
 - Experiment with different angles and power levels to find the best way to hit your opponent.  
 - Make sure the camera is positioned far enough to capture both players’ full bodies.
----
+
 ## **Installation**  
 
 1. Clone the repository:  
